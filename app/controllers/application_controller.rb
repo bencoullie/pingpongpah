@@ -7,10 +7,11 @@ class ApplicationController < ActionController::Base
   def go_back
 
     #Attempt to redirect
-    redirect_to :back
+    redirect_to :back, :alert => "You are not an admin - access denied."
 
     #Catch exception and redirect to root
     rescue ActionController::RedirectBackError
-      redirect_to root_path
+      redirect_to root_path, :alert => "You are not an admin - access denied."
    end
+
 end

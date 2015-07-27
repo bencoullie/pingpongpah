@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @website.name
+%p
+  %b Url:
+  = @website.url
+%p
+  %b Pic:
+  = image_tag @website.pic.url
+%p
+  %b User:
+  = link_to @website.user.name, @website.user
+
+= link_to 'Edit', edit_website_path(@website)
+\|
+= link_to 'Back', websites_path

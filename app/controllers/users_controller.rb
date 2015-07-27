@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     unless current_user.admin?
       unless @user == current_user
-        go_back, :alert => "Access denied."
+        go_back
       end
     end
   end
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
   def admin_only
     unless current_user.admin?
-      go_back, :alert => "Access denied."
+      go_back
     end
   end
 
