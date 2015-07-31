@@ -19,6 +19,9 @@ gem 'unicorn-rails'
 #IMAGES
 gem "paperclip", "~> 4.3"
 
+#MATERIAL DESIGN LITE
+gem 'material_design_lite-rails'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
