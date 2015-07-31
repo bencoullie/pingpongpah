@@ -4,7 +4,7 @@ class WebsitesController < ApplicationController
   # GET /websites
   # GET /websites.json
   def index
-    @websites = Website.all
+    @websites = Website.where(user_id: current_user.id)
   end
 
   # GET /websites/1
